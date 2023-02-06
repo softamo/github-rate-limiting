@@ -11,11 +11,12 @@ import picocli.CommandLine.Option;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 
-@Command(name = "github-rate-limiting", description = "...",
+@Command(name = "github-rate-limiting", description = "It outputs the current Github Rate Limit for a user.",
         mixinStandardHelpOptions = true)
 public class GithubRateLimitingCommand implements Runnable {
-    public static final String X_RATE_LIMIT = "X-RateLimit-";
-    public static final String X_RATE_LIMIT_RESET = "X-RateLimit-Reset";
+    private static final String X_RATE_LIMIT = "X-RateLimit-";
+    private static final String X_RATE_LIMIT_RESET = "X-RateLimit-Reset";
+
     @Option(names = {"-u", "--username"}, description = "Github username", required = true)
     String username;
 
