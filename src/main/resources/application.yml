@@ -1,0 +1,9 @@
+micronaut:
+  application:
+    name: githubRateLimiting
+---
+micronaut:
+  http:
+    services:
+      github:
+        url: 'https://api.github.com'
